@@ -1,0 +1,33 @@
+/* ==== Custom Font Display Swap ==== */
+
+/* Google Fonts */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Bootstrap Icons */
+@font-face {
+  font-family: 'Bootstrap Icons';
+  src: url('assets/vendor/bootstrap-icons/bootstrap-icons.woff2') format('woff2'),
+       url('assets/vendor/bootstrap-icons/bootstrap-icons.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
