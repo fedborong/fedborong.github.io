@@ -73,14 +73,12 @@
         <div class="text-center mb-5" data-aos="zoom-out" data-aos-delay="100">
           <img src="assets/img/signboard-federasi.webp" 
                alt="Visi & Misi Federasi" 
-               class="img-fluid rounded-4 shadow-lg"
-               style="max-width: 800px; width: 100%; height: auto; object-fit: cover;"
-               loading="lazy">
+               class="img-fluid rounded-4 shadow-lg">
         </div>
 
-        <!-- Visi -->
+        <!-- Visi Card -->
         <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="150">
-          <div class="card border-0 shadow-sm py-4 px-3 mx-auto" style="max-width: 700px;">
+          <div class="card border-0 shadow-sm py-4 px-3 mx-auto card-item" style="max-width: 700px;">
             <h3 class="fw-bold text-primary mb-3">Visi</h3>
             <p class="mb-0">
               Menjadi federasi koperasi yang progresif, berdaya saing dan mampan dalam sektor
@@ -89,9 +87,9 @@
           </div>
         </div>
 
-        <!-- Misi -->
+        <!-- Misi Card -->
         <div class="text-center mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card border-0 shadow-sm py-4 px-3 mx-auto" style="max-width: 700px;">
+          <div class="card border-0 shadow-sm py-4 px-3 mx-auto card-item" style="max-width: 700px;">
             <h3 class="fw-bold text-primary mb-3">Misi</h3>
             <p class="mb-0">Komitmen utama Federasi Koperasi:</p>
           </div>
@@ -99,7 +97,6 @@
 
         <!-- Misi Items -->
         <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="250">
-
           <div class="col-md-5">
             <div class="card h-100 border-0 shadow-sm p-4 text-center card-item">
               <div class="card-number mb-2">01</div>
@@ -131,8 +128,8 @@
               <p class="mb-0">Meningkatkan kesejahteraan sosial & ekonomi melalui program komuniti.</p>
             </div>
           </div>
-
         </div>
+
       </div>
     </section>
     <!-- End Section -->
@@ -187,6 +184,25 @@
   <script>
     // Initialize AOS only
     AOS.init({ duration: 800, once: true });
+
+    // Mobile nav toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navMenu = document.querySelector('#navmenu');
+    mobileNavToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileNavToggle.classList.toggle('bi-list');
+      mobileNavToggle.classList.toggle('bi-x');
+    });
+
+    // Dropdown toggle for mobile
+    document.querySelectorAll('.navmenu .dropdown > a').forEach(drop => {
+      drop.addEventListener('click', function (e) {
+        if (window.innerWidth < 1200) {
+          e.preventDefault();
+          this.nextElementSibling.classList.toggle('dropdown-active');
+        }
+      });
+    });
   </script>
 
 </body>
