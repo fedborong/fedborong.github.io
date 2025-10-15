@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Galeri Tahunan | FKPPMB</title>
-  <meta name="description" content="Paparan aktiviti & program tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad.">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -22,6 +21,7 @@
       object-fit: cover;
       border-radius: .5rem;
       transition: transform .3s ease;
+      width: 100%;
     }
     .gallery-thumb:hover { transform: scale(1.05); }
     .spinner { text-align:center; padding:3rem; }
@@ -64,7 +64,7 @@
         <p>Aktiviti & Program Tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad</p>
       </div>
 
-      <div id="gallery-container" class="accordion">
+      <div id="gallery-container">
         <div class="spinner" id="loading">Memuatkan galeri...</div>
       </div>
     </div>
@@ -118,67 +118,57 @@
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const years = [2024, 2025];
-  const container = document.getElementById("gallery-container");
   const imgPath = "assets/img/galeri/tahun/";
   const jsonPath = "assets/data/";
+  const container = document.getElementById("gallery-container");
 
   async function getJSON(url) {
     try {
       const res = await fetch(url, { cache: "no-store" });
       if (!res.ok) return [];
-      const data = await res.json();
-      return Array.isArray(data) ? data : [];
-    } catch (e) {
-      console.warn("Fetch gagal untuk", url, e);
+      return await res.json();
+    } catch {
       return [];
     }
   }
 
-  async function init() {
-    let html = "";
-    for (const year of years) {
-      const files = await getJSON(`${jsonPath}gallery-${year}.json`);
-      console.log("Loaded", year, files); // Debug log
+  let html = "";
+  for (const year of years) {
+    const data = await getJSON(`${jsonPath}gallery-${year}.json`);
+    console.log("Loaded", year, data);
 
-      let galleryItems = "";
-      if (files.length > 0) {
-        galleryItems = files.map(f => `
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <a href="${imgPath}${year}/${f}" class="glightbox" data-gallery="gallery${year}">
-              <img src="${imgPath}${year}/${f}" class="img-fluid gallery-thumb shadow-sm" alt="${f}">
-            </a>
-          </div>`).join("");
-      } else {
-        galleryItems = `<p class="text-center text-muted">Tiada gambar untuk tahun ${year}.</p>`;
-      }
-
-      html += `
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading${year}">
-            <button class="accordion-button ${year===2024?"":"collapsed"}" type="button"
-              data-bs-toggle="collapse" data-bs-target="#collapse${year}">
-              Tahun ${year}
-            </button>
-          </h2>
-          <div id="collapse${year}" class="accordion-collapse collapse ${year===2024?"show":""}"
-            data-bs-parent="#gallery-container">
-            <div class="accordion-body">
-              <div class="row g-3">${galleryItems}</div>
-            </div>
-          </div>
-        </div>`;
+    let content = "";
+    if (data.length === 0) {
+      content = `<p class="text-center text-muted mb-0">Tiada gambar untuk tahun ${year}.</p>`;
+    } else {
+      content = data.map(f => `
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+          <a href="${imgPath}${year}/${f}" class="glightbox" data-gallery="gallery${year}">
+            <img src="${imgPath}${year}/${f}" alt="${f}" class="gallery-thumb shadow-sm">
+          </a>
+        </div>`).join("");
     }
 
-    container.innerHTML = html;
-    GLightbox({ selector: ".glightbox" });
+    html += `
+      <div class="accordion-item mb-3">
+        <h2 class="accordion-header">
+          <button class="accordion-button ${year!==2024?'collapsed':''}" type="button"
+            data-bs-toggle="collapse" data-bs-target="#year-${year}">
+            Tahun ${year}
+          </button>
+        </h2>
+        <div id="year-${year}" class="accordion-collapse collapse ${year===2024?'show':''}">
+          <div class="accordion-body">
+            <div class="row">${content}</div>
+          </div>
+        </div>
+      </div>`;
   }
 
-  init().catch(e => {
-    container.innerHTML = `<p class="text-danger text-center">Ralat memuatkan galeri.</p>`;
-    console.error(e);
-  });
+  container.innerHTML = `<div class="accordion">${html}</div>`;
+  GLightbox({ selector: ".glightbox" });
 });
 </script>
 </body>
