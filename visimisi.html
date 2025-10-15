@@ -23,59 +23,7 @@
 
   <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <style>
-    /* Custom styling for Visi & Misi */
-    .vision-hero {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-    }
-    .vision-hero img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      filter: brightness(80%);
-    }
-    .vision-hero .overlay-text {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #fff;
-      text-align: center;
-    }
-    .vision-hero h2 {
-      font-weight: 700;
-      font-size: 2.5rem;
-    }
-    .card-item {
-      background: #fff;
-      border-radius: 16px;
-      padding: 25px;
-      text-align: center;
-      transition: all 0.3s ease-in-out;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-    .card-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .card-number {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #0d6efd;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .mission-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-  </style>
+  <link href="assets/css/custom-fonts.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -111,82 +59,82 @@
 
   <main class="main">
 
-<!-- ======= Visi & Misi Section (Fixed & Refined) ======= -->
-<section id="why-us" class="why-us section py-5">
-  <div class="container" data-aos="fade-up">
+    <!-- Hero Image -->
+    <section class="hero section py-5">
+      <div class="container text-center" data-aos="zoom-out">
+        <img src="assets/img/signboard-federasi.webp" 
+             alt="Visi & Misi Federasi" 
+             class="img-fluid rounded-4 shadow-lg" 
+             style="max-width: 800px;">
+      </div>
+    </section>
 
     <!-- Section Title -->
-    <div class="section-title text-center mb-5">
-      <h2>Visi & Misi FKPPMB</h2>
-      <p class="text-muted">Menerajui Koperasi ke arah kemajuan ekonomi bersama</p>
-    </div>
-
-    <!-- Image on Top -->
-    <div class="text-center mb-5" data-aos="zoom-out" data-aos-delay="100">
-      <img src="assets/img/signboard-federasi.webp" 
-           alt="Visi & Misi Federasi" 
-           class="img-fluid rounded-4 shadow-lg"
-           style="max-width: 800px; width: 100%; height: auto; object-fit: cover;">
-    </div>
-
-    <!-- Visi -->
-    <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="150">
-      <div class="card border-0 shadow-sm py-4 px-3 mx-auto" style="max-width: 700px;">
-        <h3 class="fw-bold text-primary mb-3">Visi</h3>
-        <p class="mb-0">
-          Menjadi federasi koperasi yang progresif, berdaya saing dan mampan dalam sektor
-          pemborongan dan peruncitan, sekaligus meningkatkan kesejahteraan ekonomi anggota.
-        </p>
-      </div>
-    </div>
-
-    <!-- Misi -->
-    <div class="text-center mb-4" data-aos="fade-up" data-aos-delay="200">
-      <div class="card border-0 shadow-sm py-4 px-3 mx-auto" style="max-width: 700px;">
-        <h3 class="fw-bold text-primary mb-3">Misi</h3>
-        <p class="mb-0">Komitmen utama Federasi Koperasi:</p>
-      </div>
-    </div>
-
-    <!-- Misi Items -->
-    <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="250">
-
-      <div class="col-md-5">
-        <div class="card h-100 border-0 shadow-sm p-4 text-center">
-          <div class="card-number mb-2">01</div>
-          <h5 class="fw-bold">Memperkukuh Kerjasama</h5>
-          <p class="mb-0">Mengukuhkan jaringan niaga & logistik antara koperasi anggota.</p>
+    <section class="section py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>Visi & Misi FKPPMB</h2>
+          <p class="text-muted">Menerajui Koperasi ke arah kemajuan ekonomi bersama</p>
         </div>
-      </div>
 
-      <div class="col-md-5">
-        <div class="card h-100 border-0 shadow-sm p-4 text-center">
-          <div class="card-number mb-2">02</div>
-          <h5 class="fw-bold">Pendidikan & Khidmat Nasihat</h5>
-          <p class="mb-0">Menyediakan pendidikan, latihan dan khidmat nasihat kepada anggota.</p>
+        <!-- Visi Card -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8">
+            <div class="card shadow-sm p-4 text-center">
+              <h3 class="fw-bold text-primary mb-3">Visi</h3>
+              <p>Menjadi federasi koperasi yang progresif, berdaya saing dan mampan dalam sektor
+              pemborongan dan peruncitan, sekaligus meningkatkan kesejahteraan ekonomi anggota.</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-5">
-        <div class="card h-100 border-0 shadow-sm p-4 text-center">
-          <div class="card-number mb-2">03</div>
-          <h5 class="fw-bold">Pembangunan Ekonomi</h5>
-          <p class="mb-0">Menjalankan projek perniagaan dan pelaburan yang bermanfaat kepada anggota.</p>
+        <!-- Misi Card -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8">
+            <div class="card shadow-sm p-4 text-center">
+              <h3 class="fw-bold text-primary mb-3">Misi</h3>
+              <p>Komitmen utama Federasi Koperasi:</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-5">
-        <div class="card h-100 border-0 shadow-sm p-4 text-center">
-          <div class="card-number mb-2">04</div>
-          <h5 class="fw-bold">Kebajikan Anggota</h5>
-          <p class="mb-0">Meningkatkan kesejahteraan sosial & ekonomi melalui program komuniti.</p>
+        <!-- Misi Items -->
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5">
+            <div class="card card-item h-100 p-4 text-center">
+              <div class="card-number mb-2">01</div>
+              <h5 class="fw-bold">Memperkukuh Kerjasama</h5>
+              <p>Mengukuhkan jaringan niaga & logistik antara koperasi anggota.</p>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="card card-item h-100 p-4 text-center">
+              <div class="card-number mb-2">02</div>
+              <h5 class="fw-bold">Pendidikan & Khidmat Nasihat</h5>
+              <p>Menyediakan pendidikan, latihan dan khidmat nasihat kepada anggota.</p>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="card card-item h-100 p-4 text-center">
+              <div class="card-number mb-2">03</div>
+              <h5 class="fw-bold">Pembangunan Ekonomi</h5>
+              <p>Menjalankan projek perniagaan dan pelaburan yang bermanfaat kepada anggota.</p>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="card card-item h-100 p-4 text-center">
+              <div class="card-number mb-2">04</div>
+              <h5 class="fw-bold">Kebajikan Anggota</h5>
+              <p>Meningkatkan kesejahteraan sosial & ekonomi melalui program komuniti.</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-    </div>
-  </div>
-</section>
-<!-- ======= End Section ======= -->
+      </div>
+    </section>
 
   </main>
 
@@ -243,5 +191,3 @@
 
 </body>
 </html>
-
-
