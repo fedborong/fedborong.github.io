@@ -1,64 +1,55 @@
 <!DOCTYPE html>
 <html lang="ms">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Galeri Tahunan 2024 | FKPPMB</title>
-  <meta name="description" content="Paparan aktiviti dan program tahunan FKPPMB bagi tahun 2024.">
-  <meta name="keywords" content="Galeri 2024, FKPPMB, Federasi Koperasi Pemborongan dan Peruncitan Malaysia">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeri Tahunan | FKPPMB</title>
+  <meta name="description" content="Paparan aktiviti dan program tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad.">
+  <meta name="keywords" content="Galeri Tahunan, FKPPMB, Federasi Koperasi, Koperasi Malaysia, Galeri 2024">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
+  <!-- Fonts & Vendor CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
     .gallery-img {
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 4/3;
       object-fit: cover;
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .gallery-img:hover {
       transform: scale(1.03);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
-    .filter-dropdown {
-      max-width: 280px;
-      margin: 0 auto 30px;
+    #galleryGrid {
+      min-height: 200px;
     }
   </style>
 </head>
-
 <body class="index-page">
 
-  <!-- ======= Header ======= -->
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <h1 class="sitename"><span>Fed</span>Borong</h1>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="/">Laman Utama</a></li>
           <li class="dropdown"><a href="#"><span>Info Korporat</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="/corporate.html">Profil Korporat</a></li>
-              <li><a href="/visimisi.html">Visi Dan Misi</a></li>
+              <li><a href="/visimisi.html">Visi dan Misi</a></li>
               <li><a href="/ahlilembaga.html">Ahli Lembaga</a></li>
             </ul>
           </li>
@@ -78,173 +69,28 @@
 
   <main class="main">
 
-    <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery section py-5">
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center mb-4">
           <h2>Galeri Tahunan 2024</h2>
-          <p>Aktiviti & Program Tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad</p>
+          <p>Gambar aktiviti & program rasmi FKPPMB sepanjang tahun 2024</p>
         </div>
 
-        <!-- Dropdown Filter -->
-        <div class="filter-dropdown text-center">
-          <select id="yearFilter" class="form-select">
-            <option value="all" selected>Semua Kategori</option>
-            <option value="raya">Raya KOPETRO</option>
-            <option value="hkn">HKN Perlis</option>
-            <option value="langkawi">Program Langkawi</option>
-            <option value="literasi">Literasi Koperasi Baharu</option>
-            <option value="lori">Majlis Penyerahan Lori</option>
-            <option value="lawatan">Lawatan Syarikat</option>
-            <option value="agm">AGM 2024</option>
-            <option value="muamalat">Mesyuarat Kop Muamalat</option>
-          </select>
+        <div class="text-center mb-3">
+          <button id="refreshGallery" class="btn btn-outline-primary btn-sm"><i class="bi bi-arrow-clockwise"></i> Muat Semula Gambar</button>
         </div>
 
-        <!-- Gallery Grid -->
-        <div class="row g-3" id="galleryGrid">
-
-          <!-- RAYA KOPETRO -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item raya">
-            <a href="assets/img/galeri/tahun/2024/02.05.2024-RAYA-KOPETRO-1.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/02.05.2024-RAYA-KOPETRO-1.jpeg" class="img-fluid gallery-img" alt="Raya KOPETRO 1">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item raya">
-            <a href="assets/img/galeri/tahun/2024/02.05.2024-RAYA-KOPETRO-2.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/02.05.2024-RAYA-KOPETRO-2.jpeg" class="img-fluid gallery-img" alt="Raya KOPETRO 2">
-            </a>
-          </div>
-
-          <!-- HKN PERLIS -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item hkn">
-            <a href="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-1.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-1.jpeg" class="img-fluid gallery-img" alt="HKN Perlis 1">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item hkn">
-            <a href="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-2.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-2.jpeg" class="img-fluid gallery-img" alt="HKN Perlis 2">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item hkn">
-            <a href="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-4.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-4.jpeg" class="img-fluid gallery-img" alt="HKN Perlis 4">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item hkn">
-            <a href="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-5.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-5.jpeg" class="img-fluid gallery-img" alt="HKN Perlis 5">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item hkn">
-            <a href="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-6.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-6.jpeg" class="img-fluid gallery-img" alt="HKN Perlis 6">
-            </a>
-          </div>
-
-          <!-- PROGRAM LANGKAWI -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item langkawi">
-            <a href="assets/img/galeri/tahun/2024/16.07.2024-PROGRAM-PEMERKASAAN-DC-DI-LANGKAWI -1.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/16.07.2024-PROGRAM-PEMERKASAAN-DC-DI-LANGKAWI -1.jpeg" class="img-fluid gallery-img" alt="Langkawi 1">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item langkawi">
-            <a href="assets/img/galeri/tahun/2024/16.07.2024-PROGRAM-PEMERKASAAN-DC-DI-LANGKAWI-2.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/16.07.2024-PROGRAM-PEMERKASAAN-DC-DI-LANGKAWI-2.jpeg" class="img-fluid gallery-img" alt="Langkawi 2">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item langkawi">
-            <a href="assets/img/galeri/tahun/2024/16.07.2024-PROGRAM-PEMERKASAAN-DC-DI-LANGKAWI-3.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/16.07.2024-PROGRAM-PEMERKASAAN-DC-DI-LANGKAWI-3.jpeg" class="img-fluid gallery-img" alt="Langkawi 3">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item langkawi">
-            <a href="assets/img/galeri/tahun/2024/16.07.2024-PROGRAM-PEMERKASAAN-DC-DI-LANGKAWI-4.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/16.07.2024-PROGRAM-PEMERKASAAN-DC-DI-LANGKAWI-4.jpeg" class="img-fluid gallery-img" alt="Langkawi 4">
-            </a>
-          </div>
-
-          <!-- LITERASI KOPERASI -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item literasi">
-            <a href="assets/img/galeri/tahun/2024/21.08.2024-PROGRAM-LITERASI-KOPERASI-BAHARU-DEWAN-PERDANA-SKM.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/21.08.2024-PROGRAM-LITERASI-KOPERASI-BAHARU-DEWAN-PERDANA-SKM.jpeg" class="img-fluid gallery-img" alt="Program Literasi Koperasi">
-            </a>
-          </div>
-
-          <!-- LORI -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item lori">
-            <a href="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG -1.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG -1.jpeg" class="img-fluid gallery-img" alt="Majlis Lori 1">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item lori">
-            <a href="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG -2.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG -2.jpeg" class="img-fluid gallery-img" alt="Majlis Lori 2">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item lori">
-            <a href="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG-3.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG-3.jpeg" class="img-fluid gallery-img" alt="Majlis Lori 3">
-            </a>
-          </div>
-
-          <!-- LAWATAN -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item lawatan">
-            <a href="assets/img/galeri/tahun/2024/18.11.2024-ETIKA-SDN-BHD.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/18.11.2024-ETIKA-SDN-BHD.jpeg" class="img-fluid gallery-img" alt="Lawatan Etika">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item lawatan">
-            <a href="assets/img/galeri/tahun/2024/18.11.2024-LAWATAN-KE-GOLDEN-APEX.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/18.11.2024-LAWATAN-KE-GOLDEN-APEX.jpeg" class="img-fluid gallery-img" alt="Lawatan Golden Apex">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item lawatan">
-            <a href="assets/img/galeri/tahun/2024/18.11.2024-LAWATAN-KE-KOPUSAMAJU.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/18.11.2024-LAWATAN-KE-KOPUSAMAJU.jpeg" class="img-fluid gallery-img" alt="Lawatan Kopusamaju">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item lawatan">
-            <a href="assets/img/galeri/tahun/2024/18.11.2024-SAZHAMAN-ENTERPRISE.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/18.11.2024-SAZHAMAN-ENTERPRISE.jpeg" class="img-fluid gallery-img" alt="Lawatan Sazhaman">
-            </a>
-          </div>
-
-          <!-- AGM -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item agm">
-            <a href="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-1.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-1.jpeg" class="img-fluid gallery-img" alt="AGM 1">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item agm">
-            <a href="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-2.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-2.jpeg" class="img-fluid gallery-img" alt="AGM 2">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item agm">
-            <a href="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-3.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-3.jpeg" class="img-fluid gallery-img" alt="AGM 3">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item agm">
-            <a href="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-4.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-4.jpeg" class="img-fluid gallery-img" alt="AGM 4">
-            </a>
-          </div>
-
-          <!-- MUAMALAT -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item muamalat">
-            <a href="assets/img/galeri/tahun/2024/MESY-BERSAMA-KOP-MUAMALAT.jpeg" class="glightbox" data-gallery="gallery2024">
-              <img src="assets/img/galeri/tahun/2024/MESY-BERSAMA-KOP-MUAMALAT.jpeg" class="img-fluid gallery-img" alt="Mesyuarat Kop Muamalat">
-            </a>
+        <div id="galleryGrid" class="row g-3 justify-content-center">
+          <div class="text-center text-muted py-5" id="loadingMsg">
+            <div class="spinner-border text-primary mb-2" role="status"></div><br>
+            Memuatkan gambar dari GitHub...
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ======= Footer ======= -->
+  <!-- Footer -->
   <footer id="footer" class="footer dark-background text-light">
     <div class="container footer-top py-5">
       <div class="row gy-4">
@@ -261,8 +107,6 @@
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="/">Laman Utama</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="/corporate.html">Profil Korporat</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="/visimisi.html">Visi dan Misi</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="/ahlilembaga.html">Ahli Lembaga</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="/gallery.html">Galeri Produk</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="/gallery-year.html">Galeri Tahunan</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="/contact.html">Hubungi Kami</a></li>
@@ -288,35 +132,51 @@
     </div>
   </footer>
 
-  <!-- Scroll Top & Preloader -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
-
   <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
   <script>
-    const lightbox = GLightbox({
-      selector: '.glightbox',
-      touchNavigation: true,
-      closeButton: true
-    });
+    const GITHUB_API_URL = "https://api.github.com/repos/fedborong/fedborong.github.io/contents/assets/img/galeri/tahun/2024";
+    const galleryGrid = document.getElementById("galleryGrid");
+    const loadingMsg = document.getElementById("loadingMsg");
 
-    const filterSelect = document.getElementById('yearFilter');
-    const items = document.querySelectorAll('.gallery-item');
+    async function loadGallery() {
+      galleryGrid.innerHTML = `<div class="text-center text-muted py-5" id="loadingMsg">
+        <div class='spinner-border text-primary mb-2'></div><br>Memuatkan gambar dari GitHub...
+      </div>`;
 
-    filterSelect.addEventListener('change', (e) => {
-      const value = e.target.value;
-      items.forEach(item => {
-        if (value === 'all' || item.classList.contains(value)) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
+      try {
+        const response = await fetch(GITHUB_API_URL);
+        if (!response.ok) throw new Error("Gagal mengambil data dari GitHub API.");
+        const files = await response.json();
+
+        const images = files.filter(f => /\.(jpe?g|png|webp)$/i.test(f.name));
+
+        if (images.length === 0) {
+          galleryGrid.innerHTML = "<p class='text-center text-muted'>Tiada gambar ditemui untuk tahun ini.</p>";
+          return;
         }
-      });
-    });
+
+        galleryGrid.innerHTML = "";
+        images.forEach(img => {
+          const col = document.createElement("div");
+          col.className = "col-lg-3 col-md-4 col-sm-6";
+          col.innerHTML = `
+            <a href="${img.download_url}" class="glightbox" data-gallery="gallery2024">
+              <img src="${img.download_url}" alt="${img.name}" loading="lazy" class="img-fluid gallery-img shadow-sm">
+            </a>`;
+          galleryGrid.appendChild(col);
+        });
+
+        GLightbox({ selector: ".glightbox" });
+      } catch (err) {
+        galleryGrid.innerHTML = `<p class='text-center text-danger'>Ralat: ${err.message}</p>`;
+      }
+    }
+
+    document.getElementById("refreshGallery").addEventListener("click", loadGallery);
+    loadGallery();
   </script>
 </body>
 </html>
