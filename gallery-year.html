@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Galeri Tahunan | FKPPMB</title>
-  <meta name="description" content="Paparan aktiviti dan program tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad.">
-  <meta name="keywords" content="Galeri Tahunan, Federasi Koperasi, FKPPMB, Aktiviti Koperasi, Galeri 2024">
+  <title>Galeri Tahunan 2024 | FedBorong</title>
+  <meta name="description" content="Galeri aktiviti dan program tahunan 2024 oleh Federasi Koperasi Pemborongan dan Peruncitan Malaysia Berhad.">
+  <meta name="keywords" content="Fedborong, Galeri, 2024, Koperasi, Federasi Koperasi Pemborongan dan Peruncitan Malaysia Berhad">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -19,11 +19,18 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .gallery img {
+      transition: transform .2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -38,18 +45,18 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="/" >Laman Utama</a></li>
+          <li><a href="/">Laman Utama</a></li>
           <li class="dropdown"><a href="#"><span>Info Korporat</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="/corporate.html">Profil Korporat</a></li>
-              <li><a href="/visimisi.html">Visi Dan Misi</a></li>
+              <li><a href="/visimisi.html">Visi dan Misi</a></li>
               <li><a href="/ahlilembaga.html">Ahli Lembaga</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#" class="active"><span>Media</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="/gallery.html">Produk</a></li>
-              <li><a href="/gallery-year.html" class="active">Galeri</a></li>
+              <li><a href="/gallery.html">Galeri Produk</a></li>
+              <li><a href="/gallery-year.html" class="active">Galeri Tahunan</a></li>
             </ul>
           </li>
           <li><a href="/contact.html">Hubungi Kami</a></li>
@@ -58,97 +65,120 @@
       </nav>
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <main class="main">
 
     <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery section py-5">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center mb-4">
-          <h2>Galeri Tahunan</h2>
-          <p>Aktiviti & Program Tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad</p>
+    <section id="gallery" class="gallery section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Galeri Tahun 2024</h2>
+        <p>Aktiviti dan program Federasi Koperasi Pemborongan dan Peruncitan Malaysia Berhad sepanjang tahun 2024</p>
+      </div>
+
+      <div class="container">
+
+        <!-- Dropdown Filter -->
+        <div class="dropdown mb-4 text-center" data-aos="fade-up" data-aos-delay="100">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tapis Mengikut Acara
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item filter-option active" data-filter="all">Semua</a></li>
+            <li><a class="dropdown-item filter-option" data-filter="majlis-lori">Majlis Penyerahan Lori</a></li>
+            <li><a class="dropdown-item filter-option" data-filter="raya-kopetro">Raya KOPETRO</a></li>
+            <li><a class="dropdown-item filter-option" data-filter="hkn-perlis">HKN Perlis</a></li>
+            <li><a class="dropdown-item filter-option" data-filter="agm-2024">AGM 2024</a></li>
+            <li><a class="dropdown-item filter-option" data-filter="lawatan">Lawatan Industri</a></li>
+            <li><a class="dropdown-item filter-option" data-filter="kop-muamalat">Mesyuarat KOP Muamalat</a></li>
+          </ul>
         </div>
 
-        <div class="accordion" id="yearGalleryAccordion">
+        <div class="row gy-4 justify-content-center" id="gallery-grid" data-aos="fade-up" data-aos-delay="200">
 
-          <!-- 2024 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading2024">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2024" aria-expanded="true" aria-controls="collapse2024">
-                Tahun 2024
-              </button>
-            </h2>
-            <div id="collapse2024" class="accordion-collapse collapse show" aria-labelledby="heading2024" data-bs-parent="#yearGalleryAccordion">
-              <div class="accordion-body">
-                <div class="row g-3">
-                  <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="assets/img/gallery/2024/event1.webp" class="glightbox" data-gallery="gallery2024">
-                      <img src="assets/img/gallery/2024/event1.webp" class="img-fluid rounded shadow-sm" alt="Program Tahunan 2024 - Event 1">
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="assets/img/gallery/2024/event2.webp" class="glightbox" data-gallery="gallery2024">
-                      <img src="assets/img/gallery/2024/event2.webp" class="img-fluid rounded shadow-sm" alt="Program Tahunan 2024 - Event 2">
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="assets/img/gallery/2024/event3.webp" class="glightbox" data-gallery="gallery2024">
-                      <img src="assets/img/gallery/2024/event3.webp" class="img-fluid rounded shadow-sm" alt="Program Tahunan 2024 - Event 3">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- Majlis Penyerahan Lori -->
+          <div class="col-lg-4 col-md-6 gallery-item majlis-lori">
+            <a href="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG -1.jpeg" class="glightbox" data-gallery="majlis-lori">
+              <img src="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG -1.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 gallery-item majlis-lori">
+            <a href="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG -2.jpeg" class="glightbox" data-gallery="majlis-lori">
+              <img src="assets/img/galeri/tahun/2024/23.04.2024-MAJLIS-PENYERAHAN-LORI-FEDBORONG -2.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
           </div>
 
-          <!-- 2023 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading2023">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2023" aria-expanded="false" aria-controls="collapse2023">
-                Tahun 2023
-              </button>
-            </h2>
-            <div id="collapse2023" class="accordion-collapse collapse" aria-labelledby="heading2023" data-bs-parent="#yearGalleryAccordion">
-              <div class="accordion-body">
-                <div class="row g-3">
-                  <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="assets/img/gallery/2023/event1.webp" class="glightbox" data-gallery="gallery2023">
-                      <img src="assets/img/gallery/2023/event1.webp" class="img-fluid rounded shadow-sm" alt="Program Tahunan 2023 - Event 1">
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="assets/img/gallery/2023/event2.webp" class="glightbox" data-gallery="gallery2023">
-                      <img src="assets/img/gallery/2023/event2.webp" class="img-fluid rounded shadow-sm" alt="Program Tahunan 2023 - Event 2">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- Raya KOPETRO -->
+          <div class="col-lg-4 col-md-6 gallery-item raya-kopetro">
+            <a href="assets/img/galeri/tahun/2024/02.05.2024-RAYA-KOPETRO-1.jpeg" class="glightbox" data-gallery="raya-kopetro">
+              <img src="assets/img/galeri/tahun/2024/02.05.2024-RAYA-KOPETRO-1.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 gallery-item raya-kopetro">
+            <a href="assets/img/galeri/tahun/2024/02.05.2024-RAYA-KOPETRO-2.jpeg" class="glightbox" data-gallery="raya-kopetro">
+              <img src="assets/img/galeri/tahun/2024/02.05.2024-RAYA-KOPETRO-2.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
           </div>
 
-          <!-- Tambah Tahun Baru -->
-          <!-- Salin block di atas, ubah ID & folder gambar -->
+          <!-- HKN Perlis -->
+          <div class="col-lg-4 col-md-6 gallery-item hkn-perlis">
+            <a href="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-1.jpeg" class="glightbox" data-gallery="hkn-perlis">
+              <img src="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-1.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 gallery-item hkn-perlis">
+            <a href="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-2.jpeg" class="glightbox" data-gallery="hkn-perlis">
+              <img src="assets/img/galeri/tahun/2024/05.07.2024-HKN-PERLIS-2.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
+          </div>
+
+          <!-- AGM 2024 -->
+          <div class="col-lg-4 col-md-6 gallery-item agm-2024">
+            <a href="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-1.jpeg" class="glightbox" data-gallery="agm-2024">
+              <img src="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-1.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 gallery-item agm-2024">
+            <a href="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-2.jpeg" class="glightbox" data-gallery="agm-2024">
+              <img src="assets/img/galeri/tahun/2024/29.09.2024-AGM-2024-TENERA-HOTEL-2.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
+          </div>
+
+          <!-- Lawatan Industri -->
+          <div class="col-lg-4 col-md-6 gallery-item lawatan">
+            <a href="assets/img/galeri/tahun/2024/18.11.2024-LAWATAN-KE-KOPUSAMAJU.jpeg" class="glightbox" data-gallery="lawatan">
+              <img src="assets/img/galeri/tahun/2024/18.11.2024-LAWATAN-KE-KOPUSAMAJU.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 gallery-item lawatan">
+            <a href="assets/img/galeri/tahun/2024/18.11.2024-LAWATAN-KE-GOLDEN-APEX.jpeg" class="glightbox" data-gallery="lawatan">
+              <img src="assets/img/galeri/tahun/2024/18.11.2024-LAWATAN-KE-GOLDEN-APEX.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
+          </div>
+
+          <!-- KOP Muamalat -->
+          <div class="col-lg-4 col-md-6 gallery-item kop-muamalat">
+            <a href="assets/img/galeri/tahun/2024/MESY-BERSAMA-KOP-MUAMALAT.jpeg" class="glightbox" data-gallery="kop-muamalat">
+              <img src="assets/img/galeri/tahun/2024/MESY-BERSAMA-KOP-MUAMALAT.jpeg" class="img-fluid rounded shadow-sm" alt="">
+            </a>
+          </div>
 
         </div>
       </div>
     </section>
-    <!-- ======= End Gallery Section ======= -->
-
   </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer dark-background text-light">
     <div class="container footer-top py-5">
       <div class="row gy-4">
-        
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center mb-3">
             <img src="assets/img/logo.webp" alt="FKPPMB Logo" style="height:40px;" class="me-2">
             <span class="sitename fw-bold text-white">FKPPMB</span>
           </a>
-          <p>Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad ditubuhkan untuk memperkukuh
-             jaringan koperasi dalam sektor borong dan runcit seluruh Malaysia.</p>
+          <p>Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad memperkukuh jaringan koperasi dalam sektor borong dan runcit seluruh Malaysia.</p>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
@@ -160,36 +190,28 @@
             <li><i class="bi bi-chevron-right"></i> <a href="/ahlilembaga.html">Ahli Lembaga</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="/gallery.html">Galeri Produk</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="/gallery-year.html">Galeri Tahunan</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="/contact.html">Hubungi Kami</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 footer-contact">
           <h4>Alamat</h4>
-          <p>No. 13, Jalan Utarid U5/27,<br>
-             Subang Bestari,<br>
-             40150 Shah Alam,<br>
-             Selangor</p>
+          <p>No. 13, Jalan Utarid U5/27,<br> Subang Bestari,<br> 40150 Shah Alam,<br> Selangor</p>
           <p class="mt-3"><strong>Telefon:</strong> +60 3-7831 7422</p>
           <p><strong>Email:</strong> fedborong@gmail.com</p>
         </div>
 
         <div class="col-lg-3 col-md-6">
           <h4>Ikuti Kami</h4>
-          <p>Ikuti perkembangan terkini melalui media sosial rasmi kami:</p>
           <div class="social-links d-flex">
             <a href="https://www.facebook.com/profile.php?id=100069313867192"><i class="bi bi-facebook"></i></a>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="text-center py-3">
       <p>© 2025 <strong class="sitename">FKPPMB</strong>. Semua Hakcipta Terpelihara.</p>
     </div>
   </footer>
-  <!-- End Footer -->
 
   <!-- Scroll Top & Preloader -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -198,13 +220,28 @@
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
+  <!-- Filter Script -->
+  <script>
+    const filterOptions = document.querySelectorAll('.filter-option');
+    const items = document.querySelectorAll('.gallery-item');
+
+    filterOptions.forEach(opt => {
+      opt.addEventListener('click', () => {
+        document.querySelector('.filter-option.active')?.classList.remove('active');
+        opt.classList.add('active');
+
+        const filter = opt.dataset.filter;
+        items.forEach(item => {
+          item.style.display = (filter === 'all' || item.classList.contains(filter)) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+
+  <!-- Main JS -->
   <script src="assets/js/main.js"></script>
+
 </body>
 </html>
