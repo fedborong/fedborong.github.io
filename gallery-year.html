@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Galeri Tahunan | FKPPMB</title>
-
-  <!-- Meta -->
-  <meta name="description" content="Paparan aktiviti tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad.">
-  <meta name="keywords" content="Galeri FKPPMB, Aktiviti 2024, Federasi Koperasi Pemborongan dan Peruncitan">
+  <meta name="description" content="Paparan aktiviti dan program tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad.">
+  <meta name="keywords" content="Galeri Tahunan, FKPPMB, Koperasi, Aktiviti 2024">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Vendor CSS -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Main CSS -->
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
     .gallery-thumb {
-      aspect-ratio: 1/1;
-      object-fit: cover;
       width: 100%;
-      border-radius: 8px;
-      transition: transform .3s ease;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .gallery-thumb:hover {
-      transform: scale(1.05);
+      transform: scale(1.04);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    .gallery-year-title {
+      background: #f7f7f7;
+      border-left: 4px solid #007bff;
+      padding: 10px 15px;
+      margin: 30px 0 20px;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #333;
     }
   </style>
 </head>
-<body class="index-page">
 
+<body class="index-page">
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <h1 class="sitename"><span>Fed</span>Borong</h1>
       </a>
@@ -48,14 +58,14 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="/">Laman Utama</a></li>
-          <li class="dropdown"><a href="#"><span>Info Korporat</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#"><span>Info Korporat</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="/corporate.html">Profil Korporat</a></li>
-              <li><a href="/visimisi.html">Visi & Misi</a></li>
+              <li><a href="/visimisi.html">Visi dan Misi</a></li>
               <li><a href="/ahlilembaga.html">Ahli Lembaga</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#" class="active"><span>Media</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#" class="active"><span>Media</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="/gallery.html">Galeri Produk</a></li>
               <li><a href="/gallery-year.html" class="active">Galeri Tahunan</a></li>
@@ -67,87 +77,105 @@
       </nav>
     </div>
   </header>
+  <!-- End Header -->
 
   <main class="main">
     <section class="section py-5">
       <div class="container" data-aos="fade-up">
-        <div class="section-title text-center mb-4">
-          <h2>Galeri Tahunan</h2>
-          <p>Aktiviti & Program Tahun <strong>2024</strong></p>
+        <div class="text-center mb-5">
+          <h2>Galeri Tahunan 2024</h2>
+          <p>Aktiviti & Program Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad</p>
         </div>
 
-        <div id="gallery-container" class="row g-3 justify-content-center">
-          <div class="text-center text-muted">Memuatkan galeri...</div>
+        <div id="galleryContainer" class="row g-3 justify-content-center">
+          <p class="text-center text-muted">Memuatkan gambar...</p>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer dark-background text-light">
     <div class="container footer-top py-5">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center mb-3">
-            <img src="assets/img/logo.webp" style="height:40px" class="me-2" alt="">
+            <img src="assets/img/logo.webp" alt="FKPPMB Logo" style="height:40px;" class="me-2">
             <span class="sitename fw-bold text-white">FKPPMB</span>
           </a>
-          <p>Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad memperkukuh jaringan koperasi borong dan runcit di seluruh Malaysia.</p>
+          <p>Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad ditubuhkan untuk memperkukuh jaringan koperasi dalam sektor borong dan runcit seluruh Malaysia.</p>
         </div>
+
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Pautan Pantas</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="/">Laman Utama</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="/corporate.html">Profil Korporat</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/visimisi.html">Visi dan Misi</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/ahlilembaga.html">Ahli Lembaga</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="/gallery.html">Galeri Produk</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="/gallery-year.html">Galeri Tahunan</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/contact.html">Hubungi Kami</a></li>
           </ul>
         </div>
+
         <div class="col-lg-3 col-md-6 footer-contact">
           <h4>Alamat</h4>
           <p>No. 13, Jalan Utarid U5/27,<br>Subang Bestari,<br>40150 Shah Alam,<br>Selangor</p>
           <p class="mt-3"><strong>Telefon:</strong> +60 3-7831 7422</p>
           <p><strong>Email:</strong> fedborong@gmail.com</p>
         </div>
+
         <div class="col-lg-3 col-md-6">
           <h4>Ikuti Kami</h4>
-          <a href="https://www.facebook.com/profile.php?id=100069313867192" class="text-white"><i class="bi bi-facebook fs-3"></i></a>
+          <p>Ikuti perkembangan terkini melalui media sosial rasmi kami:</p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/profile.php?id=100069313867192"><i class="bi bi-facebook"></i></a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="text-center py-3">© 2025 <strong>FKPPMB</strong>. Semua Hakcipta Terpelihara.</div>
+
+    <div class="text-center py-3">
+      <p>© 2025 <strong class="sitename">FKPPMB</strong>. Semua Hakcipta Terpelihara.</p>
+    </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
 
+  <!-- Gallery Loader -->
   <script>
-    const galleryContainer = document.getElementById("gallery-container");
-    const jsonURL = "assets/data/gallery-2024.json";
-    const basePath = "assets/img/galeri/tahun/2024/";
+    document.addEventListener("DOMContentLoaded", async () => {
+      const galleryContainer = document.getElementById("galleryContainer");
+      const jsonURL = "https://fedborong.github.io/assets/data/gallery-2024.json";
+      const basePath = "assets/img/galeri/tahun/2024/";
 
-    fetch(jsonURL)
-      .then(r => r.json())
-      .then(imgs => {
+      try {
+        const res = await fetch(jsonURL);
+        if (!res.ok) throw new Error("Gagal memuat JSON");
+        const images = await res.json();
+
         galleryContainer.innerHTML = "";
-        imgs.forEach(name => {
+        images.forEach(file => {
           const col = document.createElement("div");
           col.className = "col-lg-3 col-md-4 col-sm-6";
-          const path = basePath + name;
           col.innerHTML = `
-            <a href="${path}" class="glightbox" data-gallery="gallery2024">
-              <img src="${path}" alt="${name}" class="gallery-thumb shadow-sm">
+            <a href="${basePath}${file}" class="glightbox" data-gallery="gallery2024">
+              <img src="${basePath}${file}" alt="${file}" class="gallery-thumb">
             </a>`;
           galleryContainer.appendChild(col);
         });
+
         GLightbox({ selector: '.glightbox' });
-      })
-      .catch(err => {
-        galleryContainer.innerHTML = `<div class="text-danger text-center">Gagal memuatkan galeri.</div>`;
+      } catch (err) {
         console.error(err);
-      });
+        galleryContainer.innerHTML = `<p class="text-center text-danger">Gagal memuatkan galeri.</p>`;
+      }
+    });
   </script>
 </body>
 </html>
