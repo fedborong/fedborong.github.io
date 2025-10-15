@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Galeri Tahunan | FKPPMB</title>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-
-  <!-- Vendor CSS -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
 
   <style>
     .gallery-thumb {
-      aspect-ratio: 1/1;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-      border-radius: .5rem;
-      transition: transform .3s ease;
       width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
     }
     .gallery-thumb:hover { transform: scale(1.05); }
-    .spinner { text-align:center; padding:3rem; }
+    .accordion-button { font-weight: 600; }
+    .spinner { text-align:center; padding:3rem; color:#777; }
   </style>
 </head>
 <body class="index-page">
+
 <header id="header" class="header d-flex align-items-center sticky-top">
-  <div class="container-fluid container-xl d-flex align-items-center position-relative">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
     <a href="index.html" class="logo d-flex align-items-center me-auto">
       <h1 class="sitename"><span>Fed</span>Borong</h1>
     </a>
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="/">Laman Utama</a></li>
-        <li class="dropdown"><a href="#"><span>Info Korporat</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li class="dropdown">
+          <a href="#"><span>Info Korporat</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="/corporate.html">Profil Korporat</a></li>
             <li><a href="/visimisi.html">Visi dan Misi</a></li>
             <li><a href="/ahlilembaga.html">Ahli Lembaga</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="#" class="active"><span>Media</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li class="dropdown">
+          <a href="#" class="active"><span>Media</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="/gallery.html">Galeri Produk</a></li>
             <li><a href="/gallery-year.html" class="active">Galeri Tahunan</a></li>
@@ -58,12 +57,11 @@
 
 <main class="main">
   <section id="gallery" class="section py-5">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
       <div class="section-title text-center mb-4">
         <h2>Galeri Tahunan</h2>
         <p>Aktiviti & Program Tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad</p>
       </div>
-
       <div id="gallery-container">
         <div class="spinner" id="loading">Memuatkan galeri...</div>
       </div>
@@ -72,49 +70,13 @@
 </main>
 
 <footer id="footer" class="footer dark-background text-light">
-  <div class="container footer-top py-5">
-    <div class="row gy-4">
-      <div class="col-lg-4 col-md-6 footer-about">
-        <a href="index.html" class="d-flex align-items-center mb-3">
-          <img src="assets/img/logo.webp" style="height:40px" class="me-2" alt="FKPPMB Logo">
-          <span class="sitename fw-bold text-white">FKPPMB</span>
-        </a>
-        <p>Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad ditubuhkan untuk memperkukuh jaringan koperasi dalam sektor borong dan runcit seluruh Malaysia.</p>
-      </div>
-      <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Pautan Pantas</h4>
-        <ul>
-          <li><i class="bi bi-chevron-right"></i><a href="/">Laman Utama</a></li>
-          <li><i class="bi bi-chevron-right"></i><a href="/corporate.html">Profil Korporat</a></li>
-          <li><i class="bi bi-chevron-right"></i><a href="/visimisi.html">Visi dan Misi</a></li>
-          <li><i class="bi bi-chevron-right"></i><a href="/ahlilembaga.html">Ahli Lembaga</a></li>
-          <li><i class="bi bi-chevron-right"></i><a href="/gallery.html">Galeri Produk</a></li>
-          <li><i class="bi bi-chevron-right"></i><a href="/gallery-year.html">Galeri Tahunan</a></li>
-          <li><i class="bi bi-chevron-right"></i><a href="/contact.html">Hubungi Kami</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 footer-contact">
-        <h4>Alamat</h4>
-        <p>No.13, Jalan Utarid U5/27,<br>Subang Bestari,<br>40150 Shah Alam,<br>Selangor</p>
-        <p class="mt-3"><strong>Telefon:</strong> +60 3-7831 7422</p>
-        <p><strong>Email:</strong> fedborong@gmail.com</p>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <h4>Ikuti Kami</h4>
-        <div class="social-links d-flex">
-          <a href="https://www.facebook.com/profile.php?id=100069313867192"><i class="bi bi-facebook"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text-center py-3">
+  <div class="text-center py-4">
     <p>© 2025 <strong class="sitename">FKPPMB</strong>. Semua Hakcipta Terpelihara.</p>
   </div>
 </footer>
 
 <!-- Vendor JS -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
 <script>
@@ -129,47 +91,53 @@ document.addEventListener("DOMContentLoaded", async () => {
       const res = await fetch(url, { cache: "no-store" });
       if (!res.ok) return [];
       return await res.json();
-    } catch {
+    } catch (err) {
+      console.warn("Error loading", url, err);
       return [];
     }
   }
 
-  let html = "";
-  for (const year of years) {
-    const data = await getJSON(`${jsonPath}gallery-${year}.json`);
-    console.log("Loaded", year, data);
+  let allHtml = "";
 
-    let content = "";
-    if (data.length === 0) {
-      content = `<p class="text-center text-muted mb-0">Tiada gambar untuk tahun ${year}.</p>`;
+  for (const year of years) {
+    const files = await getJSON(`${jsonPath}gallery-${year}.json`);
+    console.log("Loaded", year, files);
+
+    let bodyContent = "";
+
+    if (files.length === 0) {
+      bodyContent = `<p class="text-center text-muted m-0">Tiada gambar untuk tahun ${year}.</p>`;
     } else {
-      content = data.map(f => `
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-          <a href="${imgPath}${year}/${f}" class="glightbox" data-gallery="gallery${year}">
-            <img src="${imgPath}${year}/${f}" alt="${f}" class="gallery-thumb shadow-sm">
-          </a>
-        </div>`).join("");
+      bodyContent = `<div class="row g-3">` + 
+        files.map(f => `
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="${imgPath}${year}/${f}" class="glightbox" data-gallery="gallery${year}">
+              <img src="${imgPath}${year}/${f}" alt="${f}" class="gallery-thumb shadow-sm" loading="lazy">
+            </a>
+          </div>`).join("") + 
+        `</div>`;
     }
 
-    html += `
+    allHtml += `
       <div class="accordion-item mb-3">
         <h2 class="accordion-header">
-          <button class="accordion-button ${year!==2024?'collapsed':''}" type="button"
+          <button class="accordion-button ${year === 2024 ? "" : "collapsed"}" type="button"
             data-bs-toggle="collapse" data-bs-target="#year-${year}">
             Tahun ${year}
           </button>
         </h2>
-        <div id="year-${year}" class="accordion-collapse collapse ${year===2024?'show':''}">
+        <div id="year-${year}" class="accordion-collapse collapse ${year === 2024 ? "show" : ""}">
           <div class="accordion-body">
-            <div class="row">${content}</div>
+            ${bodyContent}
           </div>
         </div>
       </div>`;
   }
 
-  container.innerHTML = `<div class="accordion">${html}</div>`;
+  container.innerHTML = `<div class="accordion">${allHtml}</div>`;
   GLightbox({ selector: ".glightbox" });
 });
 </script>
+
 </body>
 </html>
