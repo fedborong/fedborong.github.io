@@ -67,7 +67,7 @@
       color: #007bff;
     }
 
-    /* Mobile menu show */
+    /* Mobile menu default */
     .nav-menu-show {
       display: block !important;
     }
@@ -75,6 +75,39 @@
     @media(min-width: 1200px) {
       .nav-menu-show {
         display: flex !important;
+      }
+    }
+
+    /* Mobile menu fixed styling */
+    @media(max-width: 1199px) {
+      .navmenu ul.nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 0;
+        margin: 0;
+      }
+
+      .navmenu ul.nav-menu li {
+        border-bottom: 1px solid #eee;
+      }
+
+      .navmenu ul.nav-menu li a {
+        display: block;
+        padding: 0.8rem 1.2rem;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .navmenu ul.nav-menu li a:hover {
+        background: #f1f1f1;
+        color: #007bff;
       }
     }
 
