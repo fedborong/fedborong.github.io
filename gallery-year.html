@@ -33,7 +33,6 @@
 </head>
 
 <body class="index-page">
-
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl d-flex align-items-center position-relative">
@@ -127,75 +126,59 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-  <!-- ======= Gallery Script ======= -->
+  <!-- ======= Gallery Loader ======= -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const galleryContainer = document.getElementById("gallery-container");
-      const years = [2024, 2025]; // Tambah tahun baru sini
-      const jsonPath = "assets/data/";
-      const imgPath = "assets/img/galeri/tahun/";
+  document.addEventListener("DOMContentLoaded", async () => {
+    const galleryContainer = document.getElementById("gallery-container");
+    const years = [2024, 2025];
+    const jsonPath = "assets/data/";
+    const imgPath = "assets/img/galeri/tahun/";
+    let html = "";
 
-      async function loadYearGallery(year) {
-        const url = `${jsonPath}gallery-${year}.json`;
-        try {
-          const res = await fetch(url, { cache: "no-store" });
-          if (!res.ok) throw new Error("Tiada JSON");
-          const files = await res.json();
+    async function safeFetchJSON(url) {
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) return [];
+        const data = await res.json();
+        return Array.isArray(data) ? data : [];
+      } catch {
+        return [];
+      }
+    }
 
-          let imagesHTML = "";
-          if (Array.isArray(files) && files.length > 0) {
-            imagesHTML = files.map(file => {
-              const clean = file.trim();
-              return `
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                  <a href="${imgPath}${year}/${clean}" class="glightbox" data-gallery="gallery${year}">
-                    <img src="${imgPath}${year}/${clean}" class="img-fluid gallery-thumb shadow-sm" alt="${clean}">
-                  </a>
-                </div>`;
-            }).join("");
-          } else {
-            imagesHTML = `<p class="text-center text-muted">Tiada gambar untuk tahun ini.</p>`;
-          }
-
-          return `
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading${year}">
-                <button class="accordion-button ${year === years[0] ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${year}">
-                  Tahun ${year}
-                </button>
-              </h2>
-              <div id="collapse${year}" class="accordion-collapse collapse ${year === years[0] ? 'show' : ''}" data-bs-parent="#gallery-container">
-                <div class="accordion-body">
-                  <div class="row g-3">${imagesHTML}</div>
-                </div>
-              </div>
-            </div>`;
-        } catch (err) {
-          console.warn("Gagal load:", year, err);
-          return `
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading${year}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${year}">
-                  Tahun ${year}
-                </button>
-              </h2>
-              <div id="collapse${year}" class="accordion-collapse collapse" data-bs-parent="#gallery-container">
-                <div class="accordion-body">
-                  <p class="text-danger">Data untuk tahun ${year} belum tersedia.</p>
-                </div>
-              </div>
-            </div>`;
-        }
+    for (const year of years) {
+      const files = await safeFetchJSON(`${jsonPath}gallery-${year}.json`);
+      let content = "";
+      if (files.length > 0) {
+        content = files.map(f => `
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <a href="${imgPath}${year}/${f}" class="glightbox" data-gallery="gallery${year}">
+              <img src="${imgPath}${year}/${f}" class="img-fluid gallery-thumb shadow-sm" alt="${f}">
+            </a>
+          </div>
+        `).join("");
+      } else {
+        content = `<p class="text-center text-muted">Tiada gambar untuk tahun ${year}.</p>`;
       }
 
-      (async () => {
-        let html = "";
-        for (const y of years) html += await loadYearGallery(y);
-        galleryContainer.innerHTML = html;
-        GLightbox({ selector: ".glightbox" });
-      })();
-    });
-  </script>
+      html += `
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading${year}">
+            <button class="accordion-button ${year === 2024 ? "" : "collapsed"}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${year}">
+              Tahun ${year}
+            </button>
+          </h2>
+          <div id="collapse${year}" class="accordion-collapse collapse ${year === 2024 ? "show" : ""}" data-bs-parent="#gallery-container">
+            <div class="accordion-body">
+              <div class="row g-3">${content}</div>
+            </div>
+          </div>
+        </div>`;
+    }
 
+    galleryContainer.innerHTML = html;
+    GLightbox({ selector: ".glightbox" });
+  });
+  </script>
 </body>
 </html>
