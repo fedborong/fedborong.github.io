@@ -31,3 +31,34 @@
   font-style: normal;
   font-display: swap;
 }
+
+  /* Pastikan semua card Fokus Perniagaan sama tinggi */
+  .services .service-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  /* Ratakan tinggi semua column */
+  .services .row.gy-4 > [class*="col-"] {
+    display: flex;
+  }
+
+  /* Hover effect supaya semua nampak konsisten */
+  .services .service-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Seimbangkan jarak icon & text */
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+  }
+
