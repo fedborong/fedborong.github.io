@@ -1,133 +1,153 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Galeri Tahunan | FKPPMB</title>
-  <meta name="description" content="Paparan aktiviti dan program tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad.">
-  <meta name="keywords" content="Galeri Tahunan, FKPPMB, Federasi Koperasi, Koperasi Malaysia, Galeri 2024">
 
+  <!-- Meta -->
+  <meta name="description" content="Paparan aktiviti tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad.">
+  <meta name="keywords" content="Galeri FKPPMB, Aktiviti 2024, Federasi Koperasi Pemborongan dan Peruncitan">
+
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    .gallery-img {
-      aspect-ratio: 4/3;
+    .gallery-thumb {
+      aspect-ratio: 1/1;
       object-fit: cover;
+      width: 100%;
       border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform .3s ease;
     }
-    .gallery-img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    .gallery-thumb:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body class="index-page">
 
-<header id="header" class="header d-flex align-items-center sticky-top">
-  <div class="container-fluid container-xl position-relative d-flex align-items-center">
-    <a href="index.html" class="logo d-flex align-items-center me-auto">
-      <h1 class="sitename"><span>Fed</span>Borong</h1>
-    </a>
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="/">Laman Utama</a></li>
-        <li class="dropdown"><a href="#"><span>Info Korporat</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="/corporate.html">Profil Korporat</a></li>
-            <li><a href="/visimisi.html">Visi dan Misi</a></li>
-            <li><a href="/ahlilembaga.html">Ahli Lembaga</a></li>
-          </ul>
-        </li>
-        <li class="dropdown"><a href="#" class="active"><span>Media</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="/gallery.html">Galeri Produk</a></li>
-            <li><a href="/gallery-year.html" class="active">Galeri Tahunan</a></li>
-          </ul>
-        </li>
-        <li><a href="/contact.html">Hubungi Kami</a></li>
-      </ul>
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-    </nav>
-  </div>
-</header>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-<main class="main">
-  <section id="gallery" class="gallery section py-5">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title text-center mb-4">
-        <h2>Galeri Tahunan 2024</h2>
-        <p>Gambar aktiviti & program rasmi FKPPMB sepanjang tahun 2024</p>
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><span>Fed</span>Borong</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/">Laman Utama</a></li>
+          <li class="dropdown"><a href="#"><span>Info Korporat</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/corporate.html">Profil Korporat</a></li>
+              <li><a href="/visimisi.html">Visi & Misi</a></li>
+              <li><a href="/ahlilembaga.html">Ahli Lembaga</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="active"><span>Media</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/gallery.html">Galeri Produk</a></li>
+              <li><a href="/gallery-year.html" class="active">Galeri Tahunan</a></li>
+            </ul>
+          </li>
+          <li><a href="/contact.html">Hubungi Kami</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section py-5">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center mb-4">
+          <h2>Galeri Tahunan</h2>
+          <p>Aktiviti & Program Tahun <strong>2024</strong></p>
+        </div>
+
+        <div id="gallery-container" class="row g-3 justify-content-center">
+          <div class="text-center text-muted">Memuatkan galeri...</div>
+        </div>
       </div>
-      <div id="galleryGrid" class="row g-3 justify-content-center text-center text-muted py-5">
-        <div id="loadingMsg">
-          <div class="spinner-border text-primary mb-2"></div><br>
-          Memuatkan gambar dari GitHub...
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background text-light">
+    <div class="container footer-top py-5">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center mb-3">
+            <img src="assets/img/logo.webp" style="height:40px" class="me-2" alt="">
+            <span class="sitename fw-bold text-white">FKPPMB</span>
+          </a>
+          <p>Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad memperkukuh jaringan koperasi borong dan runcit di seluruh Malaysia.</p>
+        </div>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Pautan Pantas</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="/">Laman Utama</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/corporate.html">Profil Korporat</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/gallery.html">Galeri Produk</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/gallery-year.html">Galeri Tahunan</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Alamat</h4>
+          <p>No. 13, Jalan Utarid U5/27,<br>Subang Bestari,<br>40150 Shah Alam,<br>Selangor</p>
+          <p class="mt-3"><strong>Telefon:</strong> +60 3-7831 7422</p>
+          <p><strong>Email:</strong> fedborong@gmail.com</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4>Ikuti Kami</h4>
+          <a href="https://www.facebook.com/profile.php?id=100069313867192" class="text-white"><i class="bi bi-facebook fs-3"></i></a>
         </div>
       </div>
     </div>
-  </section>
-</main>
+    <div class="text-center py-3">© 2025 <strong>FKPPMB</strong>. Semua Hakcipta Terpelihara.</div>
+  </footer>
 
-<footer id="footer" class="footer dark-background text-light">
-  <div class="text-center py-3">
-    <p>© 2025 <strong class="sitename">FKPPMB</strong>. Semua Hakcipta Terpelihara.</p>
-  </div>
-</footer>
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
 
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script>
+    const galleryContainer = document.getElementById("gallery-container");
+    const jsonURL = "assets/data/gallery-2024.json";
+    const basePath = "assets/img/galeri/tahun/2024/";
 
-<script>
-const GITHUB_API_URL = "https://api.github.com/repos/fedborong/fedborong.github.io/contents/assets/img/galeri/tahun/2024";
-const galleryGrid = document.getElementById("galleryGrid");
-
-async function loadGallery() {
-  try {
-    const response = await fetch(GITHUB_API_URL, {
-      headers: { "User-Agent": "FedBorongGallery/1.0" }
-    });
-
-    if (!response.ok) throw new Error("Gagal memuatkan data dari GitHub API.");
-    const files = await response.json();
-    console.log("Data dari GitHub:", files);
-
-    const images = files.filter(f => /\.(jpe?g|png|webp)$/i.test(f.name));
-    console.log("Imej yang ditemui:", images);
-
-    if (images.length === 0) {
-      galleryGrid.innerHTML = "<p class='text-muted'>Tiada gambar ditemui untuk tahun ini.</p>";
-      return;
-    }
-
-    galleryGrid.innerHTML = "";
-    images.forEach(img => {
-      const col = document.createElement("div");
-      col.className = "col-lg-3 col-md-4 col-sm-6";
-      col.innerHTML = `
-        <a href="${img.download_url}" class="glightbox" data-gallery="gallery2024">
-          <img src="${img.download_url}" alt="${img.name}" loading="lazy" class="img-fluid gallery-img shadow-sm">
-        </a>`;
-      galleryGrid.appendChild(col);
-    });
-
-    GLightbox({ selector: ".glightbox" });
-  } catch (err) {
-    console.error(err);
-    galleryGrid.innerHTML = `<p class='text-danger'>Ralat: ${err.message}</p>`;
-  }
-}
-
-loadGallery();
-</script>
+    fetch(jsonURL)
+      .then(r => r.json())
+      .then(imgs => {
+        galleryContainer.innerHTML = "";
+        imgs.forEach(name => {
+          const col = document.createElement("div");
+          col.className = "col-lg-3 col-md-4 col-sm-6";
+          const path = basePath + name;
+          col.innerHTML = `
+            <a href="${path}" class="glightbox" data-gallery="gallery2024">
+              <img src="${path}" alt="${name}" class="gallery-thumb shadow-sm">
+            </a>`;
+          galleryContainer.appendChild(col);
+        });
+        GLightbox({ selector: '.glightbox' });
+      })
+      .catch(err => {
+        galleryContainer.innerHTML = `<div class="text-danger text-center">Gagal memuatkan galeri.</div>`;
+        console.error(err);
+      });
+  </script>
 </body>
 </html>
