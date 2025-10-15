@@ -16,7 +16,6 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -32,6 +31,7 @@
     .spinner { text-align:center; padding:3rem; }
   </style>
 </head>
+
 <body class="index-page">
 
   <!-- ======= Header ======= -->
@@ -63,7 +63,6 @@
       </nav>
     </div>
   </header>
-  <!-- ======= End Header ======= -->
 
   <main class="main">
     <section id="gallery" class="section py-5">
@@ -73,7 +72,7 @@
           <p>Aktiviti & Program Tahunan Federasi Koperasi Pemborongan & Peruncitan Malaysia Berhad</p>
         </div>
 
-        <div id="gallery-container" class="accordion" data-aos="fade-up">
+        <div id="gallery-container" class="accordion">
           <div class="spinner" id="loading">Memuatkan galeri...</div>
         </div>
       </div>
@@ -127,73 +126,74 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- ======= Gallery Loader Script ======= -->
+  <!-- ======= Gallery Script ======= -->
   <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      const container = document.getElementById('gallery-container');
-      const loading = document.getElementById('loading');
-      const years = [2024, 2025]; // tambah tahun baharu di sini bila perlu
-      const basePath = 'assets/img/galeri/tahun/';
-      const jsonPath = 'assets/data/';
+    document.addEventListener("DOMContentLoaded", () => {
+      const galleryContainer = document.getElementById("gallery-container");
+      const years = [2024, 2025]; // Tambah tahun baru sini
+      const jsonPath = "assets/data/";
+      const imgPath = "assets/img/galeri/tahun/";
 
-      let html = '';
-      for (const year of years) {
+      async function loadYearGallery(year) {
+        const url = `${jsonPath}gallery-${year}.json`;
         try {
-          const res = await fetch(`${jsonPath}gallery-${year}.json`);
-          if (!res.ok) throw new Error('JSON tidak ditemui');
+          const res = await fetch(url, { cache: "no-store" });
+          if (!res.ok) throw new Error("Tiada JSON");
           const files = await res.json();
 
-          html += `
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading${year}">
-                <button class="accordion-button ${year===years[0]?'':'collapsed'}" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapse${year}">
-                  Tahun ${year}
-                </button>
-              </h2>
-              <div id="collapse${year}" class="accordion-collapse collapse ${year===years[0]?'show':''}"
-                   data-bs-parent="#gallery-container">
-                <div class="accordion-body">
-          `;
-
-          if (!files || files.length === 0) {
-            html += `<p class="text-center text-muted">Tiada gambar untuk tahun ini.</p>`;
-          } else {
-            html += `<div class="row g-3">`;
-            files.forEach(name => {
-              const safeName = name.trim();
-              const url = `${basePath}${year}/${safeName}`;
-              html += `
+          let imagesHTML = "";
+          if (Array.isArray(files) && files.length > 0) {
+            imagesHTML = files.map(file => {
+              const clean = file.trim();
+              return `
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                  <a href="${url}" class="glightbox" data-gallery="gallery${year}">
-                    <img src="${url}" alt="${safeName}" class="img-fluid gallery-thumb shadow-sm">
+                  <a href="${imgPath}${year}/${clean}" class="glightbox" data-gallery="gallery${year}">
+                    <img src="${imgPath}${year}/${clean}" class="img-fluid gallery-thumb shadow-sm" alt="${clean}">
                   </a>
                 </div>`;
-            });
-            html += `</div>`;
+            }).join("");
+          } else {
+            imagesHTML = `<p class="text-center text-muted">Tiada gambar untuk tahun ini.</p>`;
           }
 
-          html += `</div></div></div>`;
-        } catch (err) {
-          html += `
+          return `
             <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+              <h2 class="accordion-header" id="heading${year}">
+                <button class="accordion-button ${year === years[0] ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${year}">
                   Tahun ${year}
                 </button>
               </h2>
-              <div class="accordion-collapse collapse"><div class="accordion-body">
-                <p class="text-danger">Tidak dapat memuatkan galeri tahun ${year}.</p>
-              </div></div>
+              <div id="collapse${year}" class="accordion-collapse collapse ${year === years[0] ? 'show' : ''}" data-bs-parent="#gallery-container">
+                <div class="accordion-body">
+                  <div class="row g-3">${imagesHTML}</div>
+                </div>
+              </div>
             </div>`;
-          console.warn('Gallery load error', year, err);
+        } catch (err) {
+          console.warn("Gagal load:", year, err);
+          return `
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading${year}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${year}">
+                  Tahun ${year}
+                </button>
+              </h2>
+              <div id="collapse${year}" class="accordion-collapse collapse" data-bs-parent="#gallery-container">
+                <div class="accordion-body">
+                  <p class="text-danger">Data untuk tahun ${year} belum tersedia.</p>
+                </div>
+              </div>
+            </div>`;
         }
       }
 
-      container.innerHTML = html;
-      GLightbox({ selector: '.glightbox' });
+      (async () => {
+        let html = "";
+        for (const y of years) html += await loadYearGallery(y);
+        galleryContainer.innerHTML = html;
+        GLightbox({ selector: ".glightbox" });
+      })();
     });
   </script>
 
