@@ -12,11 +12,10 @@
   <link href="assets/img/favicon.webp" rel="icon">
   <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon">
 
-  <!-- Preload Google Fonts -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
-  </noscript>
+  <!-- Fonts preloaded with swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,12 +28,17 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/custom-fonts.css" rel="stylesheet">
 
-  <!-- Critical CSS for Hero Text (inline to reduce LCP delay) -->
+  <!-- Critical CSS to prevent LCP shift -->
   <style>
-    #hero .hero-content h2,
-    #hero .hero-content p {
+    body, h2, p {
       font-family: 'Poppins', 'Roboto', sans-serif;
-      line-height: 1.5;
+      font-display: swap;
+      margin: 0;
+      padding: 0;
+    }
+    /* Optional: limit hero <p> width to prevent extra reflow */
+    .hero-content p {
+      max-width: 500px;
     }
   </style>
 </head>
@@ -101,7 +105,7 @@
         </div>
         <div class="col-lg-6">
           <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
-            <img src="assets/img/about/hero-cooperative.webp" width="600" height="450" loading="lazy" alt="Federasi Koperasi" class="img-fluid rounded-4 shadow-lg">
+            <img src="assets/img/about/hero-cooperative.webp" loading="lazy" alt="Federasi Koperasi" class="img-fluid rounded-4 shadow-lg">
           </div>
         </div>
       </div>
@@ -206,20 +210,20 @@
 <div id="preloader"></div>
 
 <!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-<script src="assets/vendor/php-email-form/validate.js" defer></script>
-<script src="assets/vendor/aos/aos.js" defer></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
 <!-- Main JS File -->
 <script src="assets/js/main.js" defer></script>
 
 <!-- Initialize Optimized Swiper -->
-<script defer>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.clients-slider', {
     loop: true,
